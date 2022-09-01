@@ -1,14 +1,12 @@
-import "./App.css";
-import NavBar from "./components/NavBar";
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/Hero/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>TIENDA OFICIAL</h1>
+      <> 
         <NavBar/>
-      </header>
-    </div>
+        <ItemListContainer greeting="Bienvenidos a Neche"/>
+      </>    
   );
 }
 

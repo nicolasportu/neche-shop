@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.contadorContainer {
+    width: 250px;
+    margin: 0 15px;
+    position: absolute;
+  }
+  
+  .controlContainer {
+    margin: 4px auto;
+  }
+  
+  label {
+    background-color: #bda3ca;
+    padding: 5px 50px;
+    margin: 0 15px;
+    color: #000;
+  }
+
+  .botonAgregar {
+    width: 50px;
+    padding: 5px 15px;
+    background-color: #781c68;
+    border: 2px solid #000;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+  }
+  
+  button, .botonAgregar {
+    width: fit-content;
+    background-color: #781c68;
+    border-radius: 3px;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+ 
+  

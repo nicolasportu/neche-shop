@@ -4,13 +4,13 @@
     right: 25px;
     width: 3.5rem;
     height: 4rem;
-    color: #781c68;
+    color: #000;
     font-weight: 800;
     font-size: 15px;
 }
 
 .cart {
-    color: #323232;
+    color: #000;
     cursor: pointer;
     padding: 10px;
   }

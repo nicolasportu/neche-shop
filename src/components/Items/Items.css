@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemsContainer {
+    width: 100%;
+    display: flex;
+ 
+}
+
+.cardContainer {
+    width: 100%;
+    margin: 5px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.cardContainer:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.cardContainer .contenidoCard {
+    padding: 5px;
+    text-align: center;
+}
+
+.cardContainer .contenidoCard h2 {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.cardContainer .contenidoCard p {
+    line-height: 1.5;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.cardContainer .contenidoCard button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #781c68;
+    border-radius: 3px;
+    transition: all 400ms ease;
+}
+
+.cardContainer .contenidoCard button:hover {
+    background: #000;
+    color: #781c68;
+}
+
+.fotoProducto {
+    max-width: fit-content;
+    height: 400px;
+    width: 300px;
+}
+
+.loader {
+    position: relative;
+    left: 100px;
+    width: 70px;
+    height: 70px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #781c68;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -7,6 +7,7 @@ h1 {
   margin-bottom: 0;
   cursor: pointer;
   text-align: center;
+  justify-content: center;
 }
 
 .logo {
@@ -20,7 +21,7 @@ h1 {
 .links {
   font-family: 'Bebas Neue', cursive;
   position: relative;
-  left: 480px;
+  left: 40px;
   padding: 0 10px;
   cursor: pointer;
   color: #323232;

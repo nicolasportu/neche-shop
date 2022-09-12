@@ -70,3 +70,23 @@ body {
   left: 430px;
 }
 
+.loader {
+  position: absolute;
+  left: 570px;
+  top: 250px;
+  width: 70px;
+  height: 70px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #781c68;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -5,6 +5,9 @@ function ItemDetail(props) {
   const { imagen, titulo, descripcion, precio, stock } = props.items;
 
   return (
+    <>
+    {
+    imagen ?
     <div className="detalle">
       <div className="detalle_img">
         <h3 className="descripcionTitulo">{titulo}</h3>
@@ -19,6 +22,9 @@ function ItemDetail(props) {
         </div>
       </div>
     </div>
+   : <div className="loader"></div>
+  }
+    </>
   );
 }
 

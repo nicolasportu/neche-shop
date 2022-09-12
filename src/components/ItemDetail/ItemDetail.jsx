@@ -4,8 +4,8 @@ import ItemCount from "../ItemCount/ItemCount";
 function ItemDetail(props) {
   const { imagen, titulo, descripcion, precio, stock } = props.items;
 
-  const onAdd = (qty) => {
-    alert("Seleccionaste " + qty + " productos.");
+  const onAdd = (cantidad) => {
+    alert("Seleccionaste " + cantidad + " productos.");
   };
 
   return (

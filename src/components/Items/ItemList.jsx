@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Item from "./Item";
 import "./Items.css";
-import customFetch from "../../utils/customFetch";
+import apiPromise from "../../utils/data";
 import dataFromBD from "../../utils/data";
 
 const ItemList = () => {
@@ -9,7 +9,7 @@ const ItemList = () => {
 
     //component did mount 
     useEffect(() => {
-        customFetch(2000, dataFromBD)
+        apiPromise(2000, dataFromBD)
           .then(datos => setData(dataFromBD))
           .catch(err => console.log(err))
     }, []);
@@ -25,7 +25,8 @@ const ItemList = () => {
         imagen={item.imagen}
         titulo={item.titulo}
         descripcion={item.descripcion}
-        precio={item.precio} />
+        precio={item.precio}
+        stock={item.stock} />
         ))
         : <div className="loader"></div>
     }

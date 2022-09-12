@@ -15,7 +15,7 @@ function ItemDetail(props) {
           <p>Stock: {stock}</p>
         </div>
         <div className="contador">
-          <ItemCount stock={5} initial={0} />
+          <ItemCount stock={stock} initial={0} />
         </div>
       </div>
     </div>

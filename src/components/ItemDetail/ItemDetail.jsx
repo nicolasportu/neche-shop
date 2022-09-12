@@ -4,26 +4,30 @@ import ItemCount from "../ItemCount/ItemCount";
 function ItemDetail(props) {
   const { imagen, titulo, descripcion, precio, stock } = props.items;
 
+  const onAdd = (qty) => {
+    alert("Seleccionaste " + qty + " productos.");
+  };
+
   return (
     <>
-    {
-    imagen ?
-    <div className="detalle">
-      <div className="detalle_img">
-        <h3 className="descripcionTitulo">{titulo}</h3>
-        <img src={imagen} alt={titulo}></img>
-        <div className="detalleDescripcion">
-          <h2>Precio: {precio} </h2>
-          <p>Descripción: {descripcion}</p>
-          <p>Stock: {stock}</p>
+      {imagen ? (
+        <div className="detalle">
+          <div className="detalle_img">
+            <h3 className="descripcionTitulo">{titulo}</h3>
+            <img src={imagen} alt={titulo}></img>
+            <div className="detalleDescripcion">
+              <h2>Precio: {precio} </h2>
+              <p>Descripción: {descripcion}</p>
+              <p>Stock: {stock}</p>
+            </div>
+            <div className="contador">
+              <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+            </div>
+          </div>
         </div>
-        <div className="contador">
-          <ItemCount stock={stock} initial={1} />
-        </div>
-      </div>
-    </div>
-   : <div className="loader"></div>
-  }
+      ) : (
+        <div className="loader"></div>
+      )}
     </>
   );
 }

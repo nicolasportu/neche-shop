@@ -13,7 +13,7 @@ function ItemCount({ stock, onAdd }) {
   };
 
 
-/*   return (
+   return (
     <div className="contadorContainer">
       <div className="controlContainer">
         <button onClick={quitarItem}>-</button>
@@ -22,7 +22,7 @@ function ItemCount({ stock, onAdd }) {
       </div>
       <button className="botonAgregar" onClick={() => {onAdd(count); }}> Agregar al Carrito </button>
       </div>
-  ); */
+  ); 
 }
 
 export default ItemCount;

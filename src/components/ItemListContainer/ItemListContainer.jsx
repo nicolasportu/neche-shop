@@ -1,17 +1,27 @@
-import React from "react";
-import "./ItemListContainer.css";
-import ItemCount from "../ItemCount/ItemCount";
+import React, { useEffect, useState } from "react";
 import ItemList from "../Items/ItemList";
+import customFetch from "../../utils/customFetch";
+import { useParams } from "react-router-dom";
+import dataFromBD from "../../utils/data";
 
-function ItemListContainer(props) {
+const ItemListContainer = () => {
+  const [datos, setDatos] = useState([]);
+  const {idCategory} = useParams();
 
-  return (
-    <div className="contenido">
-      <h2 className="titulo-Item">{props.greeting}</h2>
-      <ItemCount stock={5} initial={0}/>
-      <ItemList/>
-    </div>
-  );
+  useEffect(() => {
+    customFetch(2000, dataFromBD.filter(item => {
+        if (idCategory === undefined) return item;
+        return item.categoryId === idCategory
+    }))
+        .then(result => setDatos(result))
+        .catch(err => console.log(err))
+}, [idCategory]);
+
+return (
+  <>
+   <ItemList items= {datos}/>
+  </>
+)
 }
 
 export default ItemListContainer;

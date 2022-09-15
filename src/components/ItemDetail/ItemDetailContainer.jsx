@@ -1,29 +1,24 @@
 import { useEffect, useState } from "react";
-import apiPromise from "../../utils/data";
-import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
+import ItemDetail from './ItemDetail';
+import customFetch from "../../utils/customFetch";
+import dataFromBD from "../../utils/data";
 import "./Details.css";
 
-function ItemDetailContainer() {
-    const [producto, setProducto] = useState({});
+const ItemDetailContainer = () => {
+    const [dato, setDato] = useState({});
+    const {idItem} = useParams();
 
     useEffect(() => {
-        apiPromise
-            .then((res) => {
-                setProducto(res[0]);
-            })
-            .catch((err) => {
-                alert(err);
-            })
-    }, []);
-    console.log(producto);
+        customFetch(2000, dataFromBD.find(item => item.id === parseInt(idItem)))
+        .then(result => setDato(result))
+        .catch(err => console.log(err))
+    }, [idItem]);
 
     return (
-        <div className="detalleContainer">
-            <ItemDetail items={producto}/>
-        </div>
+        <ItemDetail item={dato}/>
     )
 }
-
 
 export default ItemDetailContainer;
 

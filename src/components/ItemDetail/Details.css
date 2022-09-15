@@ -27,7 +27,7 @@ body {
 }
 
 .detalle_img {
-  width: 55%;
+  width: 100%;
   margin: 5px;
   padding: 5px;
   border-radius: 12px;
@@ -62,12 +62,6 @@ body {
   margin-bottom: 2px;
   font-size: 35px;
   letter-spacing: 0.5px;
-}
-
-.contador {
-  position: relative;
-  bottom: 90px;
-  left: 430px;
 }
 
 .loader {

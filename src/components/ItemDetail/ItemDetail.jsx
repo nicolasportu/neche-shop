@@ -1,27 +1,30 @@
+import React from "react";
 import "./Details.css";
 import ItemCount from "../ItemCount/ItemCount";
 
-function ItemDetail(props) {
-  const { imagen, titulo, descripcion, precio, stock } = props.items;
-
+const ItemDetail = ({ item }) => {
   const onAdd = (cantidad) => {
     alert("Seleccionaste " + cantidad + " productos.");
   };
 
   return (
     <>
-      {imagen ? (
+      {item && item.imagen ? (
         <div className="detalle">
           <div className="detalle_img">
-            <h3 className="descripcionTitulo">{titulo}</h3>
-            <img src={imagen} alt={titulo}></img>
-            <div className="detalleDescripcion">
-              <h2>Precio: {precio} </h2>
-              <p>Descripción: {descripcion}</p>
-              <p>Stock: {stock}</p>
+            <div>
+              <img src={item.imagen} alt={item.titulo}></img>
             </div>
-            <div className="contador">
-              <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+            <div className="detalleDescripcion">
+              <h2>Precio: {item.precio}</h2>
+              <p>Descripción: {item.descripcion}</p>
+              <p>Stock: {item.stock}</p>
+              <ItemCount
+                className="contador"
+                stock={item.stock}
+                initial={1}
+                onAdd={onAdd}
+              />
             </div>
           </div>
         </div>
@@ -30,6 +33,6 @@ function ItemDetail(props) {
       )}
     </>
   );
-}
+};
 
 export default ItemDetail;

@@ -3,7 +3,7 @@
 .contadorContainer {
     width: 250px;
     margin: 0 15px;
-    position: absolute;
+    display: inline-block;
   }
   
   .controlContainer {
@@ -12,7 +12,7 @@
   
   label {
     background-color: #bda3ca;
-    padding: 5px 50px;
+    padding: 0 20px;
     margin: 0 15px;
     color: #000;
   }
@@ -30,7 +30,7 @@
     width: fit-content;
     background-color: #781c68;
     border-radius: 3px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     cursor: pointer;
   }
 

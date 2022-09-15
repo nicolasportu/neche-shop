@@ -5,6 +5,7 @@ const dataFromBD = [
     titulo: "Mochila Houston Red",
     descripcion: "Material: Gamuza",
     stock: 5,
+    categoryId: "mochila",
     precio: "$10.000",
   },
   {
@@ -13,6 +14,7 @@ const dataFromBD = [
     titulo: "Mochila Houston Oliva",
     descripcion: "Material: Gamuza",
     stock: 5,
+    categoryId: "mochila",
     precio: "$10.000",
   },
   {
@@ -21,6 +23,7 @@ const dataFromBD = [
     titulo: "Mochila Houston Animal Print",
     descripcion: "Material: Gamuza",
     stock: 5,
+    categoryId: "mochila",
     precio: "$12.000",
   },
   {
@@ -29,6 +32,7 @@ const dataFromBD = [
     titulo: "Mochila Houston Rosa",
     descripcion: "Material: Ecocuero",
     stock: 5,
+    categoryId: "mochila",
     precio: "$9.000",
   },
   {
@@ -37,6 +41,7 @@ const dataFromBD = [
     titulo: "Matera Texas Black",
     descripcion: "Material: Matelasse",
     stock: 5,
+    categoryId: "matera",
     precio: "$8.500",
   },
   {
@@ -45,6 +50,7 @@ const dataFromBD = [
     titulo: "Riñonera Tulum Green",
     descripcion: "Material: Matelasse",
     stock: 5,
+    categoryId: "riñonera",
     precio: "$5.900",
   },
   {
@@ -53,7 +59,8 @@ const dataFromBD = [
     titulo: "Matera Texas Blue Electric",
     descripcion: "Material: Matelasse",
     stock: 5,
-    precio: "$8.500",
+    categoryId: "matera",
+    precio: "$8.500",  
   },
   {
     id: 8,
@@ -61,22 +68,9 @@ const dataFromBD = [
     titulo: "Mochila Houston Purple",
     descripcion: "Material: Matelasse",
     stock: 5,
+    categoryId: "mochila",
     precio: "$10.000",
   },
 ];
 
-let is_OK = true;
-
-let apiPromise = new Promise((resolve, reject) => {
-  if (is_OK) {
-    setTimeout(() => {
-      resolve(dataFromBD);
-    }, 2000);
-  } else {
-    setTimeout(() => {
-      reject("¡ERROR!");
-    }, 4000);
-  }
-});
-
-export default apiPromise;
+export default dataFromBD;

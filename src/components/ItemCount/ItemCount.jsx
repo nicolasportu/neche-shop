@@ -4,6 +4,7 @@ import "./ItemCount.css";
 function ItemCount({ stock, onAdd }) {
   const [count, setCount] = useState(0);
 
+
   const sumarItem = () => {
     count < stock ? setCount(count + 1) : alert("No hay más productos"); 
   };
@@ -20,8 +21,12 @@ function ItemCount({ stock, onAdd }) {
         <label>{count}</label>
         <button onClick={sumarItem}>+</button>
       </div>
-      <button className="botonAgregar" onClick={() => {onAdd(count); }}> Agregar al Carrito </button>
+      { stock && count
+      ? <button className="botonAgregar" onClick={() => {onAdd(count); }}> Agregar al Carrito </button>
+      : <button className="botonAgregar" disabled> Agregar al Carrito </button>
+      }
       </div>
+
   ); 
 }
 

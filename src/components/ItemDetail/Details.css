@@ -64,6 +64,10 @@ body {
   letter-spacing: 0.5px;
 }
 
+.carritoPagina {
+  font-family: "Bebas Neue", cursive;
+}
+
 .loader {
   position: absolute;
   left: 570px;

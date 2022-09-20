@@ -1,8 +1,10 @@
 import React from "react";
 import "./Details.css";
 import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
-const ItemDetail = ({ item }) => {
+function ItemDetail ({ item }) {
+
   const onAdd = (cantidad) => {
     alert("Seleccionaste " + cantidad + " productos.");
   };
@@ -19,12 +21,8 @@ const ItemDetail = ({ item }) => {
               <h2>Precio: {item.precio}</h2>
               <p>Descripción: {item.descripcion}</p>
               <p>Stock: {item.stock}</p>
-              <ItemCount
-                className="contador"
-                stock={item.stock}
-                initial={1}
-                onAdd={onAdd}
-              />
+               <ItemCount className="contador" stock={item.stock} initial={ItemCount} onAdd={onAdd}/>
+               <Link to="/cart"><button className="carritoPagina">Carrito</button></Link>
             </div>
           </div>
         </div>

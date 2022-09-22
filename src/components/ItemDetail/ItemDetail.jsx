@@ -1,12 +1,15 @@
-import React from "react";
 import "./Details.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
 
-function ItemDetail ({ item }) {
+function ItemDetail({ item }) {
+  const ctx = useContext(CartContext);
 
   const onAdd = (cantidad) => {
     alert("Seleccionaste " + cantidad + " productos.");
+    ctx.addItem(item, cantidad);
   };
 
   return (
@@ -21,8 +24,15 @@ function ItemDetail ({ item }) {
               <h2>Precio: {item.precio}</h2>
               <p>Descripción: {item.descripcion}</p>
               <p>Stock: {item.stock}</p>
-               <ItemCount className="contador" stock={item.stock} initial={ItemCount} onAdd={onAdd}/>
-               <Link to="/cart"><button className="carritoPagina">Carrito</button></Link>
+              <ItemCount
+                className="contador"
+                stock={item.stock}
+                initial={ItemCount}
+                onAdd={onAdd}
+              />
+              <Link to="/cart">
+                <button className="carritoPagina">Carrito</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -31,6 +41,6 @@ function ItemDetail ({ item }) {
       )}
     </>
   );
-};
+}
 
 export default ItemDetail;

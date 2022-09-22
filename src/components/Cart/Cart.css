@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.sectionCart {
+  margin-top: 40px;
+}
+
+#boton-volver {
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  padding: 10px;
+  background-color: #781c68;
+  border: none;
+  border-radius: 5px;
+}
+
+#btn-container {
+  width: 100%;
+  text-align: center;
+}
+
+#btn-borrartodo {
+  font-family: "Bebas Neue", cursive;
+  background-color: #781c68;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.cartList {
+  font-family: "Bebas Neue", cursive;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 2px solid #781c68;
+  border-radius: 10px;
+}
+
+.cartList li {
+  list-style: none;
+  font-size: 25px;
+  margin: 5px;
+  border: 1px solid;
+}
+
+.itemCaja-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  width: 80vw;
+  color: #323232;
+}
+
+.itemCaja-box img {
+  width: 200px;
+  height: 250px;
+}
+
+.item-caja {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #323232;
+}
+
+.itemCaja-box button {
+  background-color: #781c68;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+#container-final {
+  color: #000;
+  font-size: 20px;
+  border: 1px solid #781c68;
+  border-radius: 20px;
+  text-align: center;
+  width: 12rem;
+  padding: 20px;
+  margin: 50px auto;
+}
+
+.boton-eliminar,
+.compra {
+  font-family: "Bebas Neue", cursive;
+  border: 1px solid black;
+}
+
+.boton-eliminar {
+  width: 60%;
+  height: 45px;
+  font-size: 17px;
+  margin-right: 2px;
+}
+
+.titleCart {
+  font-size: 35px;
+  display: block;
+  color: #323232;
+  margin-bottom: 7px;
+}

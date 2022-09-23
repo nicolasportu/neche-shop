@@ -6,7 +6,7 @@ const dataFromBD = [
     descripcion: "Material: Gamuza",
     stock: 5,
     categoryId: "mochila",
-    precio: "$10.000",
+    precio: 10000,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const dataFromBD = [
     descripcion: "Material: Gamuza",
     stock: 5,
     categoryId: "mochila",
-    precio: "$10.000",
+    precio: 10000,
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const dataFromBD = [
     descripcion: "Material: Gamuza",
     stock: 5,
     categoryId: "mochila",
-    precio: "$12.000",
+    precio: 12000,
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const dataFromBD = [
     descripcion: "Material: Ecocuero",
     stock: 5,
     categoryId: "mochila",
-    precio: "$9.000",
+    precio: 9000,
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const dataFromBD = [
     descripcion: "Material: Matelasse",
     stock: 5,
     categoryId: "matera",
-    precio: "$8.500",
+    precio: 8500,
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const dataFromBD = [
     descripcion: "Material: Matelasse",
     stock: 5,
     categoryId: "riñonera",
-    precio: "$5.900",
+    precio: 5900,
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const dataFromBD = [
     descripcion: "Material: Matelasse",
     stock: 5,
     categoryId: "matera",
-    precio: "$8.500",  
+    precio: 8500,  
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const dataFromBD = [
     descripcion: "Material: Matelasse",
     stock: 5,
     categoryId: "mochila",
-    precio: "$10.000",
+    precio: 10000,
   },
 ];
 

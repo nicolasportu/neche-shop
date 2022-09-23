@@ -21,7 +21,7 @@ function ItemDetail({ item }) {
               <img src={item.imagen} alt={item.titulo}></img>
             </div>
             <div className="detalleDescripcion">
-              <h2>Precio: {item.precio}</h2>
+              <h2>Precio: ${item.precio}</h2>
               <p>Descripción: {item.descripcion}</p>
               <p>Stock: {item.stock}</p>
               <ItemCount

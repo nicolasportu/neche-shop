@@ -7,6 +7,7 @@ const Cart = () => {
   const ctx = useContext(CartContext);
 
   return (
+    
     <section className="sectionCart">
       <div id="btn-container">
         {ctx.cartList.length === 0 ? (
@@ -37,7 +38,7 @@ const Cart = () => {
 
                   <div className="item-caja">
                     <p>Precio</p>
-                    <p>{item.precio}</p>
+                    <p>${item.precio}</p>
                   </div>
 
                   <div className="item-caja">

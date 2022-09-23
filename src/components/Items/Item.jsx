@@ -22,7 +22,7 @@ const Item = ({ id, picture, titulo, descripcion, precio, start }) => {
         <div className="contenidoCard">
           <h2 className="tituloProducto">{titulo}</h2>
           <p className="descripcionProducto">{descripcion}</p>
-          <Link to={`item/${id}`}><button onClick={handleClick} className="precioProducto">{precio}</button></Link>
+          <Link to={`item/${id}`}><button onClick={handleClick} className="precioProducto">${precio}</button></Link>
         </div>
       </div>
     </div>

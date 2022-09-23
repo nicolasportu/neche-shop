@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <header className="text-gray-600 body-font">
       <Link to="/">
-        <h1>TIENDA OFICIAL</h1>
+        <h1 className="titlePage">TIENDA OFICIAL</h1>
       </Link>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link to="/">

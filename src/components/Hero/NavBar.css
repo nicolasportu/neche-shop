@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-h1 {
+.titlePage {
   font-family: 'Bebas Neue', cursive;
   font-size: 70px;
   margin-top: 15px;
   margin-bottom: 0;
-  margin-left: 10px;
   cursor: pointer;
-  display: inline-block;
+  display: list;
   text-decoration: none;
+  justify-content: center;
+  text-align: center;
   color: #781c68;
 }
 
@@ -22,6 +23,8 @@ h1 {
 
 .links {
   display: inline-block;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
   font-family: 'Bebas Neue', cursive;
   padding: 0 10px;

@@ -42,7 +42,7 @@ const Cart = () => {
                   </div>
 
                   <div className="item-caja">
-                    <p>Stock</p>
+                    <p>Stock Disponible</p>
                     <p>{item.stock}</p>
                   </div>
 
@@ -67,6 +67,7 @@ const Cart = () => {
         <></>
       ) : (
         <div id="container-final">
+          <p>Resumen del pedido</p>
           <p>Total de productos: {ctx.cantidadProductos()}</p>
           <p>Total: ${ctx.total()}</p>
           <button className="compra">Pagar</button>
@@ -77,3 +78,4 @@ const Cart = () => {
 };
 
 export default Cart;
+

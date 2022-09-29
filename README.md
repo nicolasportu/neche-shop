@@ -1,23 +1,25 @@
+# <strong>NECHE-SHOP</strong> <br/>
+![Alt text](/public/readme.png "Optional title")
 
+# PROYECTO PERSONAL  🚀
+# React JS
 
-# PROYECTO PERSONAL NECHE-SHOP
-# ReactJS
+## Autor 💻
+* _Nicolás dos Santos Cabrita_, Desarrollador Web en formación - [nicolasportu](https://github.com/nicolasportu)
 
-Desarrollado por Nicolás dos Santos Cabrita[nicolasportu]
+### E-commerce de mochilas, materas, riñoneras y demás. Emprendimiento propio.
+Instagram del emprendimiento [necheoficial](https://www.instagram.com/necheoficial/)
 
-# E-commerce de mochilas, materas, riñoneras y demás. Emprendimiento propio.
-@necheoficial
+### <strong>Herramientas utilizadas</strong> 🛠️</br> 
+* `JavaScript`</br>
+* `React` </br>
+* `Css` </br>
+* `Hooks` </br>
+* `React-router-dom` </br>
+* `Tailwind`
 
-Herramientas utilizadas
-** JavaScript **
-** React **
-** Css **
-** Hooks **
-** React-router-dom **
-** Tailwind **
+[Repositorio del Proyecto](https://github.com/nicolasportu/neche-shop.git)
 
-Repositorio: https://github.com/nicolasportu/neche-shop.git
-Gh-pages: https://nicolasportu.github.io/neche-shop/
 
 
 

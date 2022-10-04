@@ -5,6 +5,7 @@ const ItemList = ({items}) => {
     
    return (
     <>
+    <div className="gridContainer">
     {
         items.length > 0
         ? items.map(item => (
@@ -20,6 +21,7 @@ const ItemList = ({items}) => {
         ))
         : <div className="loader"></div>
     }
+    </div>
     </>
    );
 }

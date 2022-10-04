@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .contadorContainer {
-    width: 250px;
+    width: 230px;
     margin: 0 15px;
-    display: inline-block;
+    position: relative;
+    left: 370px;
+    bottom: 100px;
   }
   
   .controlContainer {
-    margin: 4px auto;
+    margin: 2px;
+    padding: 2px;
   }
   
   label {
@@ -18,12 +21,12 @@
   }
 
   .botonAgregar {
-    width: 50px;
-    padding: 5px 15px;
+    width: 30px;
+    padding: 4px;
     background-color: #781c68;
     border: 2px solid #000;
     font-family: 'Bebas Neue', cursive;
-    cursor: pointer;
+    cursor: pointer;    
   }
   
   button, .botonAgregar {

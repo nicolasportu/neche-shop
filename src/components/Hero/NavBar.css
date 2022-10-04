@@ -1,14 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .titlePage {
-  text-decoration: none;
   font-family: 'Bebas Neue', cursive;
-  font-size: 70px;
+  font-size: 60px;
   margin-top: 15px;
   margin-bottom: 0;
   cursor: pointer;
-  display: list;
-  justify-content: center;
   text-align: center;
   color: #781c68;
 }
@@ -21,18 +18,20 @@
   height: 80px;
 }
 
-.links {
-  display: inline-block;
-  justify-content: center;
+.navBar {
+  height: 60px;
   text-align: center;
-  text-decoration: none;
+}
+
+.links {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
   font-family: 'Bebas Neue', cursive;
-  padding: 0 10px;
   margin-bottom: 20px;
   cursor: pointer;
   color: #323232;
   font-size: 30px;
-  letter-spacing: 0.5px;
 }
 
 .links:hover {

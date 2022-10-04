@@ -1,13 +1,49 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
+import { db } from "../../utils/firebaseConfig";
+import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
+import { Link } from "react-router-dom";
 import "./Cart.css";
+
 
 const Cart = () => {
   const ctx = useContext(CartContext);
 
+  const createOrder = async () => {
+    const itemsForDB = ctx.cartList.map(item => ({
+      id: item.id,
+      title: item.titulo,
+      price: item.precio,
+      quantity: item.quantity
+    }));
+
+    let order = {
+      buyer: {
+        name: "Carlos Samaritano",
+        email: "samaritanocarlos@gmail.com",
+        phone: "1198765432"
+      },
+      items: itemsForDB,
+      date: serverTimestamp(),
+      total: ctx.calcAll()
+    }
+
+    const newOrderRef = doc(collection(db, "orders"))
+    await setDoc(newOrderRef, order)
+    alert("Su compra fue creada con éxito con el siguiente id " + newOrderRef.id)
+    ctx.clear()
+
+    itemsForDB.map(async (item) => {
+      const restarStock = doc(db, "products", item.id);
+      await updateDoc(restarStock, {
+        stock: increment(-item.quantity)
+      })
+    })
+  }
+
+
   return (
-    
+
     <section className="sectionCart">
       <div id="btn-container">
         {ctx.cartList.length === 0 ? (
@@ -24,53 +60,50 @@ const Cart = () => {
         )}
       </div>
       <ul className="cartList">
-        {ctx.cartList.map((item) => (
-          <li key={item.id}>
-            {
-              <>
-                <div className="itemCaja-box">
-                  <img src={item.imagen} alt="Imagen Producto" />
+        {
+          ctx.cartList.map(item =>
+            <li key={item.id}>
+              {
+                <>
+                  <div className="itemCaja-box">
+                    <img src={item.imagen} alt="Imagen Producto" />
 
-                  <div className="item-caja">
-                    <p>Producto</p>
-                    <p>{item.titulo}</p>
+                    <div className="item-caja">
+                      <p>Producto</p>
+                      <p>{item.titulo}</p>
+                    </div>
+
+                    <div className="item-caja">
+                      <p>Precio</p>
+                      <p>${item.precio}</p>
+                    </div>
+
+                    <div className="item-caja">
+                      <p>Cantidad</p>
+                      <p>{item.quantity}</p>
+                    </div>
+
+                    <div className="item-caja">
+                      <p>Total</p>
+                      <p>${item.precio * item.quantity}</p>
+                    </div>
+
+                    <button className="boton-eliminar"
+                      onClick={() => ctx.removeItem(item.id)}>Eliminar este producto</button>
                   </div>
-
-                  <div className="item-caja">
-                    <p>Precio</p>
-                    <p>${item.precio}</p>
-                  </div>
-
-                  <div className="item-caja">
-                    <p>Stock Disponible</p>
-                    <p>{item.stock}</p>
-                  </div>
-
-                  <div className="item-caja">
-                    <p>Total</p>
-                    <p>${item.precio * item.quantity}</p>
-                  </div>
-
-                  <button
-                    className="boton-eliminar"
-                    onClick={() => ctx.removeItem(item.id)}
-                  >
-                    Eliminar este producto
-                  </button>
-                </div>
-              </>
-            }
-          </li>
-        ))}
+                </>
+              }
+            </li>)
+        }
       </ul>
       {ctx.cartList.length === 0 ? (
         <></>
       ) : (
         <div id="container-final">
           <p>Resumen del pedido</p>
-          <p>Total de productos: {ctx.cantidadProductos()}</p>
-          <p>Total: ${ctx.total()}</p>
-          <button className="compra">Pagar</button>
+          <p>Total de productos: {ctx.calcItem()}</p>
+          <p>Total: ${ctx.calcAll()}</p>
+          <button className="compra" onClick={createOrder}>Pagar</button>
         </div>
       )}
     </section>
@@ -78,4 +111,5 @@ const Cart = () => {
 };
 
 export default Cart;
+
 

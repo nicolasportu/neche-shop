@@ -1,6 +1,6 @@
 # <strong>NECHE-SHOP</strong> <br/>
 
-![Gif-Neche-Shop](/build/neche-shop-gif.gif)
+![neche-shop-gif](https://user-images.githubusercontent.com/99295940/193861225-96e7750c-450f-4d94-8911-86ff700aae20.gif)
 
 # React JS
 

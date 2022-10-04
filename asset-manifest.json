@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/neche-shop/static/css/main.d11be8fb.css",
-    "main.js": "/neche-shop/static/js/main.8b61a692.js",
+    "main.css": "/neche-shop/static/css/main.b166907f.css",
+    "main.js": "/neche-shop/static/js/main.e8a1c37a.js",
     "index.html": "/neche-shop/index.html",
-    "main.d11be8fb.css.map": "/neche-shop/static/css/main.d11be8fb.css.map",
-    "main.8b61a692.js.map": "/neche-shop/static/js/main.8b61a692.js.map"
+    "main.b166907f.css.map": "/neche-shop/static/css/main.b166907f.css.map",
+    "main.e8a1c37a.js.map": "/neche-shop/static/js/main.e8a1c37a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d11be8fb.css",
-    "static/js/main.8b61a692.js"
+    "static/css/main.b166907f.css",
+    "static/js/main.e8a1c37a.js"
   ]
 }

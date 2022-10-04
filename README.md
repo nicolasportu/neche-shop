@@ -1,6 +1,6 @@
 # <strong>NECHE-SHOP</strong> <br/>
 
-![Alt text](/build/neche-shop-gif.gif)
+![](/build/neche-shop-gif.gif)
 
 # React JS
 

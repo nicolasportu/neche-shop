@@ -3,12 +3,16 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
+import Swal from "sweetalert2";
 
 function ItemDetail({ item }) {
   const ctx = useContext(CartContext);
 
   const onAdd = (cantidad) => {
-    alert("Seleccionaste " + cantidad + " productos.");
+    Swal.fire({
+      icon: "success",
+      text: "Seleccionaste " + cantidad + " productos."
+    });
     ctx.addItem(item, cantidad);
   };
 

@@ -3,8 +3,8 @@ import { CartContext } from "../CartContext/CartContext";
 import { db } from "../../utils/firebaseConfig";
 import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import "./Cart.css";
-
 
 const Cart = () => {
   const ctx = useContext(CartContext);
@@ -30,7 +30,10 @@ const Cart = () => {
 
     const newOrderRef = doc(collection(db, "orders"))
     await setDoc(newOrderRef, order)
-    alert("Su compra fue creada con éxito con el siguiente id " + newOrderRef.id)
+    Swal.fire({
+      icon: "success",
+      text: "Su compra fue creada exitosamente con el siguiente id " + newOrderRef.id
+    })
     ctx.clear()
 
     itemsForDB.map(async (item) => {
